@@ -1,0 +1,279 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+@font-face {
+    font-family: 'Ubuntu'; /*a name to be used later*/
+    src: url('font/Ubuntu/Ubuntu-Regular.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'GloriaHallelujah'; /*a name to be used later*/
+    src: url('font/GloriaHallelujah/GloriaHallelujah.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Pacifico'; /*a name to be used later*/
+    src: url('font/Pacifico/Pacifico-Regular.ttf'); /*URL to font*/
+}
+
+html {
+	margin: 0;
+	padding: 0;
+	background: url(pic/bg1.png) fixed;
+	}
+body {
+	font: 75% Verdana;
+	line-height: 1.88889;
+	color: #555753;
+	background:  url(pic/Patrick.png) no-repeat bottom right;
+	background-size: 15%;
+	margin: 0;
+	padding: 0;
+	}
+p {
+	margin-top: 0;
+	text-align: justify;
+	}
+h3 {
+	font: italic normal 1.6em Ubuntu;
+	letter-spacing: 1px;
+	margin-bottom: 5px;
+	color: #FF3557;
+	}
+a:link {
+	font-weight: bold;
+	text-decoration: none;
+	color: #ed9fbe;
+	}
+a:visited {
+	font-weight: bold;
+	text-decoration: none;
+	color: #acb268;
+	}
+a:hover, a:focus, a:active {
+	text-decoration: none;
+	text-shadow: 0 0 10px #f7ffc0;
+	color: #9feddc;
+	}
+abbr {
+	border-bottom: none;
+	}
+
+
+/* specific divs */
+.page-wrapper {
+	background: url(pic/black_ribbon.png) fixed no-repeat top left;
+	padding: 0 175px 0 110px;
+	margin: 0;
+	position: relative;
+	}
+
+.intro {
+	min-width: 470px;
+	width: 100%;
+	}
+
+header h1 {
+	background: transparent url(pic/lg.png) no-repeat top left;
+	margin : auto;
+	margin-top: 10px;
+	display: block;
+	width: 219px;
+	height: 87px;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+
+header h2 {
+	font: 25px Pacifico;
+	color: #FFFF84;
+	text-shadow: 0 0 10px #000;
+	margin-left: 50%;
+}
+
+header {
+	padding-top: 20px;
+	height: 87px;
+}
+
+div[role=article] {
+	padding: 0px 10px 0 10px;
+	background-color: white;
+	border: 7px solid;
+	border-radius: 10px;
+	border-color: #ACFFAF	;
+	box-shadow: 0 0 10px;
+	margin-bottom: 30px;
+}
+
+.summary {
+	clear: both;
+	width: 500px;
+	margin: auto;
+	margin-top: 100px;
+	float: center;
+
+	}
+.summary p {
+	font: italic 1.1em/2.2 GloriaHallelujah;
+	text-align: center;
+	padding-top: 5px;
+	}
+
+.preamble {
+	padding: 0px 10px 0 10px;
+	}
+
+.explanation {
+	width: 45%;
+	margin-right: 10px;
+	float: left;
+}
+
+.explanation p {
+	padding-bottom: 16px;
+}
+
+.participation {
+	width: 48%;
+	margin-left: 50%;
+}
+
+.benefits {
+	margin-top: 0;
+}
+
+.supporting {
+	padding-left: 10px;
+	margin-bottom: 40px;
+	}
+
+footer {
+	text-align: center;
+	}
+footer a:link, footer a:visited {
+	margin-right: 20px;
+	}
+
+ footer .zen-validate-html {
+	content: url(pic/html.png);
+	width: 4%;
+	height: 4%;
+}
+
+footer .zen-validate-css {
+	content: url(pic/css.png);
+	width: 4%;
+	height: 4%;
+}
+
+footer .zen-license {
+	content: url(pic/cc.png);
+	width: 3%;
+	height: 3%;
+}
+
+footer .zen-accessibility {
+	content: url(pic/a11y.png);
+	width: 3%;
+	height: 3%;
+}
+
+footer .zen-github {
+	content: url(pic/gh.png);
+	width: 3%;
+	height: 3%;
+}
+
+.sidebar {
+	margin-left: 600px;
+	position: absolute;
+	top: 0;
+	right: 5px;
+	}
+.sidebar .wrapper {
+	font: 10px verdana;
+	background: white;
+	border-radius: 20px;
+	padding: 10px;
+	margin-top: 150px;
+	width: 130px;
+	box-shadow: 0 10px 15px;
+	}
+.sidebar h3.select {
+	background: transparent url(pic/h1.gif) no-repeat top left;
+	margin: 10px 0 5px 0;
+	width: 97px;
+	height: 16px;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar h3.archives {
+	background: transparent url(pic/h2.gif) no-repeat top left;
+	margin: 25px 0 5px 0;
+	width: 97px;
+	height: 14px;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar h3.resources {
+	background: transparent url(pic/h3.gif) no-repeat top left;
+	margin: 25px 0 5px 0;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+
+
+.sidebar ul {
+	margin: 0;
+	padding: 0;
+	}
+.sidebar li {
+	line-height: 1.3em;
+	background: transparent url(pic/cr1.gif) no-repeat top center;
+	display: block;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	list-style-type: none;
+	}
+.sidebar li a:link {
+	color: #2b6d3c;
+	font-weight: lighter;
+	}
+
+.sidebar li a:hover {
+	color: #868a6e;
+	text-shadow: 0 0 5px; #f3ffa6;
+	font-weight: lighter;
+	}
+
+.sidebar li a:visited {
+	color: #6e7c8d;
+	}
+
+
+.extra1 {
+	background: transparent url(pic/bobo.png) top left no-repeat;
+	position: absolute;
+	top: 40px;
+	right: 0;
+	width: 150px;
+	height: 150px;
+
+	}
