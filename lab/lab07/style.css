@@ -1,0 +1,15 @@
+#menu1 {
+  background-color: orange;
+  color: white;
+  border-radius: 25px;
+}
+
+.table th {
+   text-align: center;
+   background-color: orange;
+   color: white;
+}
+
+body {
+  align-content: center;
+}

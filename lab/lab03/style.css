@@ -1,0 +1,86 @@
+html {
+	margin: 0;
+	padding: 0;
+	}
+
+body {
+     background-image: url("pic/bg.png");
+     background-repeat: repeat;
+     background-attachment: fixed;
+}
+
+form {
+	font: 75% Verdana;
+	line-height: 1.88889;
+	color: #555753;
+	margin: 0;
+	padding: 0;
+	}
+
+fieldset {
+  width:50%;
+  margin:auto;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .8);
+  border-color: #E9F674;
+  box-shadow: 0 0 10px #363636;
+}
+
+input[type=text], select,[type=date] {
+      color: #446699;
+      width: 75%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-sizing: border-box;
+  }
+
+[type=BUTTON] {
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-sizing: border-box;
+      background-color: #E9F674;
+      color: #446699;
+  }
+
+[type=text]:focus, [type=date]:focus, select:focus, [type=BUTTON]:focus {
+      outline: none;
+      border-color: #9ecaed;
+  }
+
+legend {
+  background-color: rgba(233, 246, 116, .8);
+  border-radius: 8px;
+}
+
+#btn1 {
+  margin: 0 auto;
+  width: 15%;
+}
+
+#backBtn {
+  margin: auto;
+  width: 5%;
+  visibility: hidden;
+}
+
+#summittable {
+  font: 90% Verdana;
+	line-height: 1.88889;
+  padding: 2px 20px;
+  margin: 8px auto;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  width: 50%;
+  background-color: rgba(255, 255, 255, .4);
+  border-radius: 5px;
+}
+
+table #summittable {
+box-shadow: 0 0 3px #000000;
+}
