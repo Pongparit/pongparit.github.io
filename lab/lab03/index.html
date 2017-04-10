@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<head>
+<title>JavaScript Lab 03 Tutorial</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="FormScript.js">
+    window.onload = test;
+</script>
+</head>
+<body>
+  <form name="theForms">
+  <tr>
+    <fieldset id='field1'>
+      <legend>Name</legend>
+        <table>
+    <td>First name:</td>
+    <td>  <input type="text" name="firstname" placeholder="First Name"></td>
+  </tr>
+  <tr>
+    <td>Last name:</td>
+    <td><input type="text" name="lastname" placeholder="Last Name"></td>
+  </tr></table>
+  </fieldset>
+  <fieldset id='field2'>
+    <legend>Address</legend>
+    <table>
+  <tr>
+      <td>House Number:</td>
+      <td><input type="text" name="HouseNumber" placeholder="xx/xx"></td>
+      <td>Street:</td>
+      <td><input type="text" name="Street" placeholder="Street"></td>
+      <td>City:</td>
+      <td><input type="text" name="City" placeholder="City"></td>
+  </tr>
+  <tr>
+          <td>Province:</td>
+          <td><input type="text" name="Province" placeholder="Province"></td>
+          <td>Zipcode:</td>
+          <td><input type="text" name="Zipcode" placeholder="xxxxx"></td>
+  </tr>
+</table>
+</fieldset>
+<fieldset id='field3'>
+  <legend>Contact</legend>
+    <table><tr>
+<td>Phone Number:</td>
+<td>  (+662)-<input type="text" name="Phone" placeholder="xxxxxx "></td>
+</tr>
+<tr>
+<td>Cell Phone Number:</td>
+<td>(+66)<input type="text" name="Cellphone" placeholder="xxxxxxxxx"></td>
+</tr></table>
+</fieldset>
+<fieldset>
+  <legend>Identity</legend>
+    <table>
+      <tr>
+  <td>Citizenship number:</td>
+  <td><input type="text" name="cID" placeholder="xxxxxxxxxxxxx"></td>
+  </tr>
+      <tr>
+<td>Birthday:</td>
+<td><input type="date" name="dOB"></td>
+</tr>
+<tr>
+<td>Birth Day of Week:</td>
+<td><select name="dDOB">
+    <option value="">Choose Day</option>
+    <option value="Monday">Monday</option>
+    <option value="Tuesday">Tuesday</option>
+    <option value="Wednesday">Wednesday</option>
+    <option value="Thursday">Thursday</option>
+    <option value="Friday">Friday</option>
+    <option value="Saturday">Saturday</option>
+    <option value="Sunday">Sunday</option>
+  </select></td>
+</tr>
+<tr>
+<td>Zodiac Sign:</td>
+<td><select name="zSign" onchange="ZodiacSign(this.value);" >
+    <option value="">Choose Sign</option>
+    <option value="Aquarius">Aquarius</option>
+    <option value="Pisces">Pisces</option>
+    <option value="Aries">Aries</option>
+    <option value="Taurus">Taurus</option>
+    <option value="Gemini">Gemini</option>
+    <option value="Cancer">Cancer</option>
+    <option value="Leo">Leo</option>
+    <option value="Virgo">Virgo</option>
+    <option value="Libra">Libra</option>
+    <option value="Scorpio">Scorpio</option>
+    <option value="Sagittarius">Sagittarius</option>
+    <option value="Capricorn">Capricorn</option>
+  </select></td><td><img src=""  id="zSignPic" width="30px" height="30px"></td>
+</tr>
+<tr>
+<td>Zodiac Year:</td>
+<td><select name="zYear" onchange="ZodiacYear(this.value);">
+    <option value="">Choose Year</option>
+    <option value="Rat">Rat</option>
+    <option value="Ox">Ox</option>
+    <option value="Tiger">Tiger</option>
+    <option value="Rabbit">Rabbit</option>
+    <option value="Dragon">Dragon</option>
+    <option value="Snake">Snake</option>
+    <option value="Horse">Horse</option>
+    <option value="Goat">Goat</option>
+    <option value="Monkey">Monkey</option>
+    <option value="Rooster">Rooster</option>
+    <option value="Dog">Dog</option>
+    <option value="Pig">Pig</option>
+  </select></td>
+  <td><img src=""  id="zYearPic" width="30px" height="30px" ></td>
+</tr></table>
+</fieldset><div id='btn1'>
+<input type="button" id='save' value="Save" onclick="SaveButton()">
+<input type="button" id='cancel' value="Cancel" onclick="CancelButton()">
+<input type="button" id='submit' value="Submit" onclick="SummitBuutton()"> </div>
+</form>
+<table id="summittable">
+<script>
+    window.onload = loadForm;
+</script>
+<tr id="summittable">
+<td id="summittable">Name:</td>
+<td id="summittable">  <p id="ntext"></p></td>
+</tr>
+<tr id="summittable">
+<td id="summittable">Address:</td>
+<td id="summittable"><p id="atext"></p></td>
+</tr>
+<tr id="summittable">
+<td id="summittable">Phone Number:</td>
+<td id="summittable"><p id="pntext"></p></td>
+</tr>
+<tr id="summittable">
+<td id="summittable">Cell Phone Number:</td>
+<td id="summittable"><p id="cpntext"></p></td>
+</tr>
+<tr id="summittable">
+<td id="summittable">Citizenship number:</td>
+<td id="summittable"><p id="cntext"></p></td>
+</tr>
+<tr id="summittable">
+<td id="summittable">Birthday:</td>
+<td id="summittable"><p id="btext"></p></td>
+</tr>
+<tr id="summittable">
+<td id="summittable">Birth Day of Week:</td>
+<td id="summittable"><p id="bdtext"></p></td>
+</tr>
+<tr id="summittable">
+<td id="summittable">Zodiac Sign:</td>
+<td id="summittable"><p id="zstext"></p></td>
+</tr>
+<tr id="summittable">
+<td id="summittable">Zodiac Year:</td>
+<td id="summittable"><p id="zytext"></p></td>
+</tr>
+</table>
+<div style="text-align:center;">
+<input type="button" id='backBtn' value="Back" onclick="clearTable()" hidden>
+</div>
+</body>
+</html>
