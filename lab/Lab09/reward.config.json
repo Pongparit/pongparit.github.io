@@ -1,0 +1,52 @@
+[{
+  "name":"Iphone 7",
+  "img" :"img/reward/iphone7-pic.png"
+},
+{
+  "name":"Alienware 15 Gaming Laptop",
+  "img" :"img/reward/alienware15-pic.png"
+},
+{
+  "name":"Apple Watch",
+  "img" :"img/reward/apple-watch-pic.png"
+},
+{
+  "name":"DJI Mavix Pro",
+  "img" :"img/reward/dji-mavix-pro-pic.png"
+},
+{
+  "name":"Nvidia Geforce GTX 1080 ti",
+  "img" :"img/reward/gtx-1080-ti-pic.png"
+},
+{
+  "name":"Hoverboard",
+  "img" :"img/reward/hoverboard-pic.png"
+},
+{
+  "name":"HTC Vive",
+  "img" :"img/reward/htc-vive.png"
+},
+{
+  "name":"iRobot ROOMA 870",
+  "img" :"img/reward/IROBOT-ROOMA-870-pic.png"
+},
+{
+  "name":"Marshall III",
+  "img" :"img/reward/marshallIII-pic.png"
+},
+{
+  "name":"Playstation 4 pro",
+  "img" :"img/reward/ps-4-pro-pic.png"
+},
+{
+  "name":"Nintendo Switch",
+  "img" :"img/reward/switch-pic.png"
+},
+{
+  "name":"Fujifilm T20",
+  "img" :"img/reward/t20-pic.png"
+},
+{
+  "name":"Sony Z9D",
+  "img" :"img/reward/Z9D-pic.png"
+}]
