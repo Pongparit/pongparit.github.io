@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css.map">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="img/icon.png">
+  <title>Drawing lots :: Challange</title>
+</head>
+<body>
+  <div id="vue-app">
+    <section class="hero is-primary is-large header-image">
+      <div class="hero-head">
+        <header class="nav">
+          <div class="container">
+            <div class="nav-left">
+              <a class="nav-item">
+                <img src="img/logo.png" alt="Logo">
+              </a>
+            </div>
+            <span class="nav-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <div class="nav-right nav-menu">
+              <span class="nav-item">
+                <a @click="isShowHistory = true" v-if="isStart">Show History</a>
+              </span>
+          </div>
+        </header>
+      </div>
+      <div class="hero-body">
+
+        <div class="container has-text-centered">
+          <h1 class="title is-2" leave-active-class="animated fadeOut">
+            <p v-if="isStart">{{ currentPlayer }}'s turn!</p>
+            <p v-if="beforeStart">Player Count : {{ players.length }}</p>
+          </h1>
+          <div id="drawing-lots" v-if="!isEnd"></div>
+          <h2 class="subtitle is-5" leave-active-class="animated fadeOut">
+            <p v-if="!canStart" leave-active-class="animated fadeOut">Require 5 players to drawing lots.</p>
+            <button id="startBtn" class="button is-danger is-outlined animated fadeIn" v-if="canStart" @click="submitStart()">Start!</button>
+          </h2>
+          <p>
+            <button class="button is-success" @click="isPlayerCreate = true" v-if="beforeStart">Register Event</button>
+            <button class="button is-inverted is-info is-outlined" @click="isShowHistory = true" v-if="isEnd">Show History</button>
+            <button class="button is-danger is-inverted is-outlined" @click="reload()" v-if="isEnd">Play Again!</button>
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p>
+            This site is made by <strong>Pongparit Paocharoen</strong> 5610404495.
+          </p>
+          <p>
+            <a href="http://github.com/Pongparit">
+              <span class="icon">
+                <i class="fa fa-github-square"></i>
+              </span>
+            </a>
+            <a href="http://facebook.com/earlrit">
+              <span class="icon">
+                <i class="fa fa-facebook-square"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+      <!-- // Reward Modal -->
+      <modal v-if="isRewardOpen" @close="isRewardOpen = false">
+        <header class="modal-card-head">
+          <p class="modal-card-title">{{ rewardCurrentName }}</p>
+          <button class="delete" @click="isRewardOpen = false"></button>
+        </header>
+        <section class="modal-card-body">
+          <img :src="rewardCurrentSrc">
+        </section>
+      </modal>
+
+      <!-- // Register Modal -->
+      <modal v-if="isPlayerCreate" @close="isPlayerCreate = false">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Register Event</p>
+          <button class="delete" @click="isPlayerCreate = false"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="field">
+            <label class="label">Firstname</label>
+            <p class="control">
+              <input v-model="formPlayer.firstname" class="input" type="text">
+            </p>
+          </div>
+          <div class="field">
+            <label class="label">Lastname</label>
+            <p class="control">
+              <input v-model="formPlayer.lastname" class="input" type="text">
+            </p>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <a class="button is-success" @click="submitPlayer()">Register</a>
+          <a class="button" @click="isPlayerCreate = false">Cancel</a>
+        </footer>
+      </modal>
+
+      <!-- // History Modal -->
+      <modal v-if="isShowHistory" @close="isShowHistory = false">
+        <header class="modal-card-head">
+          <p class="modal-card-title">History</p>
+          <button class="delete" @click="isShowHistory = false"></button>
+        </header>
+        <section class="modal-card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Reward</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr v-for="(player, index) in players" v-if="player.haveReward">
+                <td>{{ index + 1 }}</td>
+                <td>{{ player.firstname }}</td>
+                <td>{{ player.lastname }}</td>
+                <td>{{ getRewardName(player.rewardId) | isNothing }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </modal>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
