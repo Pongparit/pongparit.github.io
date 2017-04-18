@@ -7,8 +7,8 @@
   <title>1</title>
   <?php
 $servername = "localhost";
-$username = "pongparit";
-$password = "P@ssw0rd";
+$username = "root";
+$password = "";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=webtech", $username, $password);
